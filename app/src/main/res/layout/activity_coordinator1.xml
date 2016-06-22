@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="br.com.concrete.coordinatorlayoutexamples.Coordinator1Activity">
+    tools:context="br.com.concrete.coordinatorlayoutexamples.ui.activity.Coordinator1Activity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

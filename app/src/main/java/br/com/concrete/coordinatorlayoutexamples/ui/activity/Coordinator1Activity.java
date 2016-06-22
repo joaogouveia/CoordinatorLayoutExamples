@@ -1,4 +1,4 @@
-package br.com.concrete.coordinatorlayoutexamples;
+package br.com.concrete.coordinatorlayoutexamples.ui.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import br.com.concrete.coordinatorlayoutexamples.R;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="br.com.concrete.coordinatorlayoutexamples.Coordinator1Activity"
+    tools:context="br.com.concrete.coordinatorlayoutexamples.ui.activity.Coordinator1Activity"
     tools:showIn="@layout/activity_coordinator1">
 
     <TextView
