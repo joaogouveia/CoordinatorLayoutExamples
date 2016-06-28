@@ -33,6 +33,11 @@
             android:name=".ui.activity.Coordinator3Activity"
             android:label="@string/trem_bala"
             android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".ui.activity.Coordinator4Activity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

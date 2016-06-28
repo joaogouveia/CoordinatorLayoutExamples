@@ -48,4 +48,9 @@ public class MainActivity extends AppCompatActivity {
     protected void clickCollapse() {
         startActivity(new Intent(this, Coordinator3Activity.class));
     }
+
+    @OnClick(R.id.text_behavior)
+    protected void click4() {
+        startActivity(new Intent(this, Coordinator4Activity.class));
+    }
 }
