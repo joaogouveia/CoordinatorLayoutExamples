@@ -5,6 +5,7 @@ import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -28,7 +29,7 @@ public class Coordinator4Activity extends AppCompatActivity implements AppBarLay
     private int mMaxScrollSize;
 
 
-    private static final int PERCENTAGE_TO_ANIMATE_AVATAR = 60;
+    private static final int PERCENTAGE_TO_ANIMATE_AVATAR = 50;
     private boolean mIsAvatarShown = true;
 
     @Override
@@ -39,7 +40,8 @@ public class Coordinator4Activity extends AppCompatActivity implements AppBarLay
         setSupportActionBar(toolbar);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
                 onBackPressed();
             }
         });
@@ -53,7 +55,8 @@ public class Coordinator4Activity extends AppCompatActivity implements AppBarLay
         if (mMaxScrollSize == 0)
             mMaxScrollSize = appBarLayout.getTotalScrollRange();
 
-        int percentage = (Math.abs(verticalOffset)) * 100 / mMaxScrollSize;
+
+        int percentage = (Math.abs(verticalOffset)*100) / mMaxScrollSize;
 
         if (percentage >= PERCENTAGE_TO_ANIMATE_AVATAR && mIsAvatarShown) {
             mIsAvatarShown = false;
@@ -68,4 +71,27 @@ public class Coordinator4Activity extends AppCompatActivity implements AppBarLay
                     .start();
         }
     }
+
+//    @Override
+//    public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+//        if (mMaxScrollSize == 0)
+//            mMaxScrollSize = appBarLayout.getTotalScrollRange();
+//
+//
+//        float percentage = (float) Math.abs(verticalOffset) / mMaxScrollSize;
+//
+//        if (percentage >= 0.25f && percentage <= 0.75f) {
+//            float scalePer = 1 - ((percentage - 0.25f) * 2);
+//            Log.d("Coordinator", ">>>>>>>>>>>>>>>>> " + scalePer);
+//            toolbarProfileImage.setScaleX(scalePer);
+//            toolbarProfileImage.setScaleY(scalePer);
+//        }else if(percentage < 0.25f){
+//            toolbarProfileImage.setScaleX(1);
+//            toolbarProfileImage.setScaleY(1);
+//        }else{
+//            toolbarProfileImage.setScaleX(0);
+//            toolbarProfileImage.setScaleY(0);
+//        }
+//
+//    }
 }
