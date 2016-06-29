@@ -3,4 +3,9 @@
     <dimen name="app_bar_height2">300dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="image_width">96dp</dimen>
+    <dimen name="image_final_width">48dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="toolbar_custom">60dp</dimen>
 </resources>

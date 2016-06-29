@@ -38,6 +38,11 @@
             android:name=".ui.activity.Coordinator4Activity"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".ui.activity.Coordinator5Activity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

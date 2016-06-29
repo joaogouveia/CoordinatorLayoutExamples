@@ -53,4 +53,9 @@ public class MainActivity extends AppCompatActivity {
     protected void click4() {
         startActivity(new Intent(this, Coordinator4Activity.class));
     }
+
+    @OnClick(R.id.text_dismiss)
+    protected void click5() {
+        startActivity(new Intent(this, Coordinator5Activity.class));
+    }
 }
