@@ -1,36 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/text_snackbar"
+        style="@style/TextAppearance.AppCompat.Large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SnackBar"/>
+        android:layout_margin="16dp"
+        android:text="Exemplo 1" />
 
     <TextView
         android:id="@+id/text_scroll"
+        style="@style/TextAppearance.AppCompat.Large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Scroll simples"/>
+        android:layout_margin="16dp"
+        android:text="Exemplo 2" />
 
     <TextView
         android:id="@+id/text_collapse"
+        style="@style/TextAppearance.AppCompat.Large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Collapse Toolbar"/>
+        android:layout_margin="16dp"
+        android:text="Exemplo 3" />
 
     <TextView
         android:id="@+id/text_behavior"
+        style="@style/TextAppearance.AppCompat.Large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Custom Behavior"/>
+        android:layout_margin="16dp"
+        android:text="Exemplo 4" />
 
     <TextView
         android:id="@+id/text_dismiss"
+        style="@style/TextAppearance.AppCompat.Large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Swipe to Dismiss"/>
+        android:layout_margin="16dp"
+        android:text="Exemplo 5" />
 
 </LinearLayout>
