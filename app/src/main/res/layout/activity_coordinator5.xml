@@ -36,8 +36,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
-        <!--app:navigationIcon="@drawable/ic_arrow_back"-->
 
 
         <LinearLayout
@@ -61,6 +61,7 @@
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/toolbar_custom"
         android:elevation="8dp"
         android:src="@drawable/nene"
         app:border_color="#FFF"
@@ -71,10 +72,9 @@
         app:layout_anchorGravity="top|center_horizontal"
         app:layout_behavior="br.com.concrete.coordinatorlayoutexamples.ui.behavior.AvatarImageBehavior"
         app:layout_scrollFlags="scroll"
-        android:layout_marginBottom="@dimen/toolbar_custom"
         app:startHeight="2dp"
         app:startToolbarPosition="2dp"
-        app:startXPosition="2dp"/>
+        app:startXPosition="2dp" />
 
     <include layout="@layout/content_my_coordinator" />
 
