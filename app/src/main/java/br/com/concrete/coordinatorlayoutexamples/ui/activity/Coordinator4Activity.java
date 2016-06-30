@@ -50,48 +50,48 @@ public class Coordinator4Activity extends AppCompatActivity implements AppBarLay
         mMaxScrollSize = appBar.getTotalScrollRange();
     }
 
-    @Override
-    public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-        if (mMaxScrollSize == 0)
-            mMaxScrollSize = appBarLayout.getTotalScrollRange();
-
-
-        int percentage = (Math.abs(verticalOffset)*100) / mMaxScrollSize;
-
-        if (percentage >= PERCENTAGE_TO_ANIMATE_AVATAR && mIsAvatarShown) {
-            mIsAvatarShown = false;
-            toolbarProfileImage.animate().scaleY(0).scaleX(0).setDuration(200).start();
-        }
-
-        if (percentage <= PERCENTAGE_TO_ANIMATE_AVATAR && !mIsAvatarShown) {
-            mIsAvatarShown = true;
-
-            toolbarProfileImage.animate()
-                    .scaleY(1).scaleX(1)
-                    .start();
-        }
-    }
-
 //    @Override
 //    public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
 //        if (mMaxScrollSize == 0)
 //            mMaxScrollSize = appBarLayout.getTotalScrollRange();
 //
 //
-//        float percentage = (float) Math.abs(verticalOffset) / mMaxScrollSize;
+//        int percentage = (Math.abs(verticalOffset)*100) / mMaxScrollSize;
 //
-//        if (percentage >= 0.25f && percentage <= 0.75f) {
-//            float scalePer = 1 - ((percentage - 0.25f) * 2);
-//            Log.d("Coordinator", ">>>>>>>>>>>>>>>>> " + scalePer);
-//            toolbarProfileImage.setScaleX(scalePer);
-//            toolbarProfileImage.setScaleY(scalePer);
-//        }else if(percentage < 0.25f){
-//            toolbarProfileImage.setScaleX(1);
-//            toolbarProfileImage.setScaleY(1);
-//        }else{
-//            toolbarProfileImage.setScaleX(0);
-//            toolbarProfileImage.setScaleY(0);
+//        if (percentage >= PERCENTAGE_TO_ANIMATE_AVATAR && mIsAvatarShown) {
+//            mIsAvatarShown = false;
+//            toolbarProfileImage.animate().scaleY(0).scaleX(0).setDuration(200).start();
 //        }
 //
+//        if (percentage <= PERCENTAGE_TO_ANIMATE_AVATAR && !mIsAvatarShown) {
+//            mIsAvatarShown = true;
+//
+//            toolbarProfileImage.animate()
+//                    .scaleY(1).scaleX(1)
+//                    .start();
+//        }
 //    }
+
+    @Override
+    public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+        if (mMaxScrollSize == 0)
+            mMaxScrollSize = appBarLayout.getTotalScrollRange();
+
+
+        float percentage = (float) Math.abs(verticalOffset) / mMaxScrollSize;
+
+        if (percentage >= 0.25f && percentage <= 0.75f) {
+            float scalePer = 1 - ((percentage - 0.25f) * 2);
+            Log.d("Coordinator", ">>>>>>>>>>>>>>>>> " + scalePer);
+            toolbarProfileImage.setScaleX(scalePer);
+            toolbarProfileImage.setScaleY(scalePer);
+        }else if(percentage < 0.25f){
+            toolbarProfileImage.setScaleX(1);
+            toolbarProfileImage.setScaleY(1);
+        }else{
+            toolbarProfileImage.setScaleX(0);
+            toolbarProfileImage.setScaleY(0);
+        }
+
+    }
 }
